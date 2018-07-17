@@ -211,3 +211,38 @@ float를 적용한 엘리먼트가 부모 보다 크기가 크면 바깥으로 �
 ### 보충 설명
 meta viewport를 이용하면 모바일에서도 더 나은 모습으로 보이게 할 수 있음
 
+## inline-block
+inline-block 엘리먼트는 inline 엘리먼트와 비슷하지만 너비와 높이를 지정할 수 있음.
+
+## inline-block 레이아웃
+몇 가지 염두할 점이 있음:
+- inline-block 엘리먼트는 vertical-align 프로퍼티의 영향을 받음
+- 각 칼럼의 너비를 설정해야 함
+- HTML의 각 칼럼 사이에 공백이 있으면 카럼 간에 틈이 생김
+
+```css
+nav {
+    display: inline-block;
+    vertical-align: top;
+    width: 25%;
+}
+.column {
+    display: inline-block;
+    vertical-align: top;
+    width: 75%;
+}
+```
+
+## 칼럼
+다중 칼럼 텍스트를 아래와 같이 쉽게 만들 수 있음:
+```css
+.three-column {
+    padding: 1em;
+    -moz-column-count: 3;
+    -moz-column-gap: 1em;
+    -webkit-column-count: 3;
+    -webkit-column-gap: 1em;
+    column-count: 3;
+    column-gap: 1em;
+}
+```
