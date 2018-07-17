@@ -81,3 +81,61 @@ span, a
 }
 ```
 
+## position
+
+### static
+position 기본값. "위치가 지정되지 않았다"라는 의미.
+```css
+.static {
+    position: static;
+}
+```
+
+### relative
+```css
+.relative1 {
+    position: relative;
+}
+
+.relative2 {
+    position: relative;
+    top: -20px;
+    left: 20px;
+    background-color: white;
+    width: 500px;
+}
+```
+
+relative는 별도의 위치 프로퍼티를 지정하지 않는 이상 static과 동일하게 동작합니다.
+top, right, bottom, left를 지정하면 위치가 조정됨.
+
+### fixed
+viewport에 상대적으로 위치가 지정됨. top, right, bottom, left로 위치 지정.
+```css
+.fixed {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 200px;
+    background-color: white;
+}
+```
+
+### absolute
+"위치가 지정된" 가장 가까운 곳에 위치한 조상 엘리먼트에 대해 위치를 지정함.
+그런 엘리먼트가 없으면 document body를 기준으로 함.
+```css
+.relative {
+    position: relative;
+    width: 600px;
+    height: 400px;
+}
+
+.absolute {
+    position: absolute;
+    top: 120px;
+    right: 0;
+    width: 300px;
+    height: 200px;
+}
+```
